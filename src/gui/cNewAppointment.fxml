@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="971.0" styleClass="borderpane" stylesheets="@resources/css/ClinicianCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CNewAppointmentController">
+   <center>
+      <Pane opacity="0.7" prefHeight="347.0" prefWidth="579.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblHomeAddress" layoutX="407.0" layoutY="127.0" text="Patient Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAppTime" layoutX="372.0" layoutY="259.0" prefHeight="20.0" prefWidth="123.0" text="Appointment Time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDOB" layoutX="52.0" layoutY="195.0" text="Date of Birth">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAppDate" layoutX="18.0" layoutY="259.0" text="Appointment Date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPatientName" layoutX="91.0" layoutY="127.0" text="PPSN">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" disable="true" editable="false" layoutX="503.0" layoutY="123.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField fx:id="txtAppTime" layoutX="503.0" layoutY="255.0" prefHeight="25.0" prefWidth="211.0" />
+            <DatePicker fx:id="dtpDOB" disable="true" editable="false" layoutX="137.0" layoutY="190.0" prefHeight="25.0" prefWidth="211.0" promptText="DD/MM/YYYY" showWeekNumbers="false" />
+            <DatePicker fx:id="dtpAppDate" layoutX="137.0" layoutY="254.0" prefHeight="25.0" prefWidth="211.0" promptText="DD/MM/YYYY" showWeekNumbers="false" />
+            <ComboBox fx:id="cboPPS" layoutX="137.0" layoutY="123.0" prefHeight="25.0" prefWidth="211.0" />
+            <Label layoutX="20.0" layoutY="324.0" text="Vaccination Batch">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="375.0" layoutY="195.0" text="Vaccination Centre">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboCentre" layoutX="503.0" layoutY="191.0" prefHeight="25.0" prefWidth="211.0" />
+            <ComboBox fx:id="cboBatch" layoutX="137.0" layoutY="321.0" prefHeight="25.0" prefWidth="211.0" />
+            <TextField fx:id="txtStatus" editable="false" layoutX="503.0" layoutY="321.0" prefHeight="25.0" prefWidth="211.0" />
+            <Label layoutX="433.0" layoutY="325.0" text="Status">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSave" layoutX="630.0" layoutY="383.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="25.0" prefWidth="84.0" text="Book" />
+            <Label layoutX="250.0" layoutY="14.0" text="New Appointment">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo%20inverse.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#homeButton" prefHeight="25.0" prefWidth="84.0" text="Home" />
+            <Region prefHeight="177.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#logOutButton" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

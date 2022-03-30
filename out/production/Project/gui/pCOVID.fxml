@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" styleClass="borderpane" stylesheets="@resources/css/PatientCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PCOVIDController">
+   <top>
+      <HBox prefHeight="51.0" prefWidth="900.0" style="-fx-background-color: EE4E34;" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="52.0" prefWidth="207.0" />
+            <Button mnemonicParsing="false" onAction="#returnButton" prefHeight="51.0" prefWidth="240.0" text="More Information">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#infDiseasesButton" prefHeight="51.0" prefWidth="240.0" text="Infectious Diseases">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#infVaccineButton" prefHeight="51.0" prefWidth="240.0" text="Vaccine Information" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="673.0" prefWidth="200.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="185.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo%20inverse.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#pHomeButton" prefHeight="50.0" prefWidth="200.0" text="Home">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnGetVaccinated" mnemonicParsing="false" onAction="#pGetVaccButton" prefHeight="50.0" prefWidth="200.0" text="Get Vaccinated">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnLearnMore" mnemonicParsing="false" onAction="#pLearnMoreButton" prefHeight="50.0" prefWidth="200.0" text="Learn More">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnAppointments" mnemonicParsing="false" onAction="#pAppointmentsButton" prefHeight="50.0" prefWidth="200.0" text="Appointments">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#logOutButton" prefHeight="40.0" prefWidth="200.0" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ee4e34" layoutX="253.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblGeneral" layoutX="14.0" layoutY="113.0" text="General Information:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtGeneral" editable="false" layoutX="190.0" layoutY="90.0" prefHeight="70.0" prefWidth="400.0" text="This should be editable by PHA and should have general info on COVID19. background will be trans" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="lblTimeline" layoutX="14.0" layoutY="383.0" text="Timeline:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtTimeline" editable="false" layoutX="190.0" layoutY="360.0" prefHeight="70.0" prefWidth="400.0" text="Time line info, trans background" wrapText="true" />
+            <Label fx:id="lblRollout" layoutX="15.0" layoutY="473.0" text="Vaccine Rollout:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtRollout" layoutX="190.0" layoutY="450.0" prefHeight="70.0" prefWidth="400.0" text="Rollout info">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnSave" layoutX="596.0" layoutY="511.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="31.0" prefWidth="95.0" text="Save" />
+            <Label fx:id="lblSymptoms" layoutX="14.0" layoutY="203.0" text="Symptoms:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtSymptoms" editable="false" layoutX="190.0" layoutY="180.0" prefHeight="70.0" prefWidth="400.0" text="Symptom info, trans back" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="lblFigures" layoutX="15.0" layoutY="293.0" text="Current Figures:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtFig" editable="false" layoutX="190.0" layoutY="270.0" prefHeight="70.0" prefWidth="400.0" text="current figures and an image above prob historical graph" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" styleClass="borderpane" stylesheets="@resources/css/PatientCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PVaccRequestController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="200.0" styleClass="sidenav" stylesheets="@resources/css/PatientCSS.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="200.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo_inverse.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#gvHomeButton" prefHeight="50.0" prefWidth="264.0" text="Home">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" text="Learn More">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="236.0" text="Appointments">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Region prefHeight="287.0" prefWidth="210.0" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="239.0" text="Log Out">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSubmit" alignment="TOP_CENTER" layoutX="610.0" layoutY="531.0" mnemonicParsing="false" onAction="#gvSubmitButton" prefHeight="31.0" prefWidth="138.0" text="Submit" />
+            <Label fx:id="lblSymp" layoutX="21.0" layoutY="104.0" text="Do you have any of the following symptoms?">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblShortBreath" layoutX="19.0" layoutY="131.0" prefHeight="25.0" text="- shortness of breath or breathing difficulties.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNewCough" layoutX="19.0" layoutY="151.0" prefHeight="25.0" prefWidth="188.0" text="- a new cough, of any kind.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFever" layoutX="19.0" layoutY="191.0" text="- a fever (high temperature - 38 degrees Celsius or above)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSmellTaste" layoutX="19.0" layoutY="171.0" text="- loss or change to your sense of smell or taste.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAbroad" layoutX="21.0" layoutY="301.0" prefHeight="60.0" prefWidth="457.0" text="Have you returned to Ireland from another country within the last 14 days?" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblClose" layoutX="21.0" layoutY="241.0" prefHeight="60.0" prefWidth="461.0" text="Have you been in close contact with anyone who had a confirmed case of COVID-19 within the last 14 days?" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSymp1" layoutX="21.0" layoutY="211.0" text="Have you been diagnosed with Covid-19 within the last four weeks?" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAbroad1" layoutX="21.0" layoutY="361.0" prefHeight="30.0" prefWidth="484.0" text="Have you had another vaccine within the last 14 days?">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAbroad11" layoutX="21.0" layoutY="391.0" prefHeight="60.0" prefWidth="409.0" text="Do you have a bleeding disorder or are you on anticoagulation therapy?" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAbroad111" layoutX="21.0" layoutY="441.0" prefHeight="58.0" prefWidth="543.0" text="Are you less than 14 weeks or more than 33 weeks pregnant?" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rdbSymptomsYes" layoutX="610.0" layoutY="105.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="symptoms" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbSymptomsNo" layoutX="696.0" layoutY="105.0" mnemonicParsing="false" text="No" toggleGroup="$symptoms">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbCovidYes" layoutX="610.0" layoutY="409.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="covid" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbCovidNo" layoutX="696.0" layoutY="409.0" mnemonicParsing="false" text="No" toggleGroup="$covid">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbContactYes" layoutX="610.0" layoutY="259.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="close" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbContactNo" layoutX="696.0" layoutY="259.0" mnemonicParsing="false" text="No" toggleGroup="$close">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbAbroadYes" layoutX="610.0" layoutY="314.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="abroad" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbAbroadNo" layoutX="696.0" layoutY="314.0" mnemonicParsing="false" text="No" toggleGroup="$abroad">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbVaccineYes" layoutX="610.0" layoutY="364.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="vaccine" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbVaccineNo" layoutX="696.0" layoutY="364.0" mnemonicParsing="false" text="No" toggleGroup="$vaccine">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbBleedYes" layoutX="610.0" layoutY="212.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="bleed" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbBleedNo" layoutX="696.0" layoutY="212.0" mnemonicParsing="false" text="No" toggleGroup="$bleed">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdbPregnantYes" layoutX="610.0" layoutY="458.0" mnemonicParsing="false" selected="true" text="Yes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="preggers" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdbPregnantNo" layoutX="696.0" layoutY="458.0" mnemonicParsing="false" text="No" toggleGroup="$preggers">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <Text fill="#ee4e34" layoutX="254.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questionnaire">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

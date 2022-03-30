@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="586.0" prefWidth="1533.0" styleClass="borderpane" stylesheets="@resources/css/adminCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AVaccineInfoController">
+   <center>
+      <AnchorPane prefHeight="586.0" prefWidth="769.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblVaccineInfo" layoutX="16.0" layoutY="118.0" prefHeight="348.0" prefWidth="1309.0">
+              <columns>
+                <TableColumn fx:id="colBatchNo" prefWidth="100.0" text="Batch No." />
+                <TableColumn fx:id="colVaccName" prefWidth="131.0" text="Vaccine Name" />
+                  <TableColumn fx:id="colStorage" prefWidth="166.0" text="Storage Conditions" />
+                  <TableColumn fx:id="colQuantityOrdered" prefWidth="157.0" text="Quantity Ordered" />
+                  <TableColumn fx:id="colQuantityUsed" prefWidth="129.0" text="Quantity Used" />
+                  <TableColumn fx:id="colAvailability" prefWidth="97.0" text="Availability" />
+                  <TableColumn fx:id="colExpiryDate" prefWidth="106.0" text="Expiry Date" />
+                  <TableColumn fx:id="colDesc" prefWidth="171.0" text="Vaccine Description" />
+                  <TableColumn fx:id="colDoses" minWidth="6.0" prefWidth="142.0" text="Required Doses" />
+                  <TableColumn fx:id="colEfficacy" prefWidth="98.0" text="Efficacy" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAdd" layoutX="1095.0" layoutY="530.0" mnemonicParsing="false" onAction="#addButton" prefHeight="25.0" prefWidth="95.0" text="Add" />
+            <Button fx:id="btnDelete" layoutX="1217.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Delete" />
+            <TextField fx:id="txtStorage" editable="false" layoutX="467.0" layoutY="479.0" prefWidth="200.0" promptText="Storage Conditions" />
+            <TextField fx:id="txtVaccId" editable="false" layoutX="248.0" layoutY="479.0" prefWidth="200.0" promptText="Vaccine ID" />
+            <TextField fx:id="txtDescription" editable="false" layoutX="24.0" layoutY="530.0" prefWidth="200.0" promptText="Description" />
+            <Label layoutX="529.0" layoutY="35.0" text="Vaccine Stock Info">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtQuantityOrdered" layoutX="686.0" layoutY="479.0" prefWidth="200.0" promptText="Quantity Ordered" />
+            <TextField fx:id="txtQuantityUsed" layoutX="895.0" layoutY="479.0" prefWidth="200.0" promptText="Quantity Used" />
+            <TextField fx:id="txtDoses" editable="false" layoutX="248.0" layoutY="530.0" prefWidth="200.0" promptText="Required Doses" />
+            <TextField fx:id="txtEfficacy" editable="false" layoutX="467.0" layoutY="530.0" prefWidth="200.0" promptText="Efficacy" />
+            <DatePicker fx:id="dteExpiry" layoutX="1117.0" layoutY="478.0" prefWidth="200.0" promptText="Expiry Date" showWeekNumbers="false" />
+            <ComboBox fx:id="cmbVaccineName" layoutX="24.0" layoutY="480.0" prefWidth="200.0" promptText="Vaccine Name" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo%20inverse.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#aHomeButton" prefHeight="25.0" prefWidth="120.0" text="Home" />
+            <Button mnemonicParsing="false" onAction="#aVaccRequestsButton" text="Vaccination Requests" />
+            <Button mnemonicParsing="false" onAction="#aVaccCentresButton" text="Vaccine Centres" />
+            <Button mnemonicParsing="false" onAction="#aArticlesButton" text="Articles" />
+            <Button mnemonicParsing="false" onAction="#aPatientsButton" text="Patients" />
+            <Region prefHeight="120.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#aLogOutButton" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

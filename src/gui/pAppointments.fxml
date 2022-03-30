@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" styleClass="borderpane" stylesheets="@resources/css/PatientCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PAppointmentsController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="200.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="200.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo_inverse.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#pHome" prefHeight="50.0" prefWidth="327.0" text="Home">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnGetVacc" mnemonicParsing="false" onAction="#pGetVaccButton" prefHeight="50.0" prefWidth="354.0" text="Get Vaccinated">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLearnMore" mnemonicParsing="false" onAction="#pLearnMoreButton" prefHeight="50.0" prefWidth="229.0" text="Learn More">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Region prefHeight="227.0" prefWidth="200.0" />
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#pLogOutButton" prefHeight="41.0" prefWidth="322.0" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="904.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblAppointments" layoutX="9.0" layoutY="135.0" prefHeight="370.0" prefWidth="879.0">
+              <columns>
+                <TableColumn fx:id="colAppId" prefWidth="141.0" text="Appointment ID" />
+                <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="161.0" resizable="false" text="Appointment Date" />
+                  <TableColumn fx:id="colStatus" prefWidth="171.0" text="Appointment Status" />
+                  <TableColumn fx:id="colClinician" prefWidth="103.0" text="Clinician ID" />
+                  <TableColumn fx:id="colBatch" prefWidth="131.0" text="Batch Number" />
+                  <TableColumn fx:id="colEircode" prefWidth="171.0" text="Vaccination Centre" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnScheduleApp" layoutX="762.0" layoutY="536.0" mnemonicParsing="false" onAction="#scheduleAppointmentButton" prefHeight="35.0" prefWidth="124.0" text="Schedule " />
+            <Text fill="#ee4e34" layoutX="338.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnCancelApp" layoutX="620.0" layoutY="536.0" mnemonicParsing="false" onAction="#cancelApp" prefHeight="35.0" prefWidth="124.0" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

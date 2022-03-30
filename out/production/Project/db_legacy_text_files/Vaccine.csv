@@ -1,0 +1,4 @@
+vaccineId,vaccName,vacAuthorised,vaccTypeDesc,reqDoses,vaccineTemp,efficacy
+1,Moderna,true,RNA-Based,2,-15.0,0.94
+2,Pfizer/BioNTech,true,RNA-Based,2,-70.0,0.95
+3,AstraZeneca,false,Non-Replicating Viral Vector,1,2.0,0.9

@@ -1,0 +1,60 @@
+/* 
+    Created on : 21 Mar 2021, 20:47:38
+    Author     : Eliot and Anthony
+*/
+
+.borderpane {
+   -fx-background-color: #FCEDDA;
+}
+
+
+.button {
+    -fx-background-color: #EE4E34;
+    -fx-text-fill: #FCEDDA;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.button .shadowed {
+	-fx-effect: dropshadow(three-pass-box, gray, 5, 0.5, 0, 2);
+}
+
+.glyph-icon {
+    -fx-fill: #EE4E34
+}
+
+.button:hover {
+    -fx-background-color: #FBDFCB;
+    -fx-text-fill: #EE4E34;   
+    -fx-border-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.hyperlink:hover {
+    -fx-fill: #FBDFCB
+    
+}
+
+.text-field {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a;    
+}
+
+.label {
+    -fx-text-fill: #EE4E34
+}
+
+.region{
+    -fx-background-color:#EE4E34;
+}
+
+.text{
+    -fx-text-fill: #EE4E34
+}
+
+.hyperlink{
+    -fx-text-fill: #EE4E34
+}

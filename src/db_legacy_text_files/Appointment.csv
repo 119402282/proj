@@ -1,0 +1,4 @@
+appointmentId,appointmentDateAndTime,appointmentStatus,userId,clinicianId,vaccineBatch,centre
+1,22/05/2021 09:45,Authorised,7482091L,lcotter546@hse.ie,1,T12 DV56
+2,18/03/2021 13:00,Absent,5194903D,ndrake198@hse.ie,1,D01 P5W9
+3,21/04/2021 16:20,Authorised,5194903D,lcotter546@hse.ie,1,T12 DV56

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="borderpane" stylesheets="@resources/css/PatientCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PHomeController">
+   <center>
+      <VBox BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Button fx:id="btnGetVacc" layoutX="100.0" layoutY="80.0" mnemonicParsing="false" onAction="#getVaccButton" prefHeight="40.0" prefWidth="180.0" text="Get Vaccinated">
+               <VBox.margin>
+                  <Insets bottom="8.0" left="40.0" right="40.0" top="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLearnMore" layoutX="150.0" mnemonicParsing="false" onAction="#learnMoreButton" prefHeight="40.0" prefWidth="180.0" text="Learn More">
+               <VBox.margin>
+                  <Insets bottom="8.0" left="40.0" right="40.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnApp" layoutX="150.0" mnemonicParsing="false" onAction="#appointmentsButton" prefHeight="40.0" prefWidth="180.0" text="Appointments">
+               <VBox.margin>
+                  <Insets bottom="8.0" left="40.0" right="40.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#logOutButton" prefHeight="35.0" prefWidth="80.0" text="Log Out">
+               <VBox.margin>
+                  <Insets left="90.0" right="40.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="8.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="25.0" prefWidth="320.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <left>
+      <Region prefHeight="250.0" prefWidth="320.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Region prefHeight="250.0" prefWidth="320.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: EE4E34;" stylesheets="@resources/css/PatientCSS.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="350.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo_inverse.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

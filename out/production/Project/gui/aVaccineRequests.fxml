@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="512.0" prefWidth="1029.0" styleClass="borderpane" stylesheets="@resources/css/adminCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AVaccineRequestsController">
+   <center>
+      <AnchorPane prefHeight="461.0" prefWidth="971.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="266.0" layoutY="14.0" text="Mass Assignment">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboClinician" layoutX="34.0" layoutY="427.0" prefHeight="27.0" prefWidth="223.0" promptText="Clinician ID" />
+            <ComboBox fx:id="cboBatch" layoutX="303.0" layoutY="427.0" prefHeight="27.0" prefWidth="223.0" promptText="Batches" />
+            <ComboBox fx:id="cboStatus" layoutX="562.0" layoutY="427.0" prefHeight="27.0" prefWidth="233.0" promptText="Status" />
+            <TableView fx:id="tblAppointments" layoutX="34.0" layoutY="81.0" prefHeight="337.0" prefWidth="761.0">
+              <columns>
+                <TableColumn fx:id="colPPS" prefWidth="118.0" text="Patient PPSN" />
+                  <TableColumn fx:id="colDate" prefWidth="173.0" text="Appointment Date" />
+                  <TableColumn fx:id="colClinician" prefWidth="104.0" text="Clincian ID" />
+                  <TableColumn fx:id="colStatus" prefWidth="63.0" text="Status" />
+                  <TableColumn fx:id="colEircode" prefWidth="165.0" text="Vaccination Centre" />
+                  <TableColumn fx:id="colBatch" prefWidth="124.0" text="Vaccine Batch" />
+              </columns>
+            </TableView>
+            <Button layoutX="725.0" layoutY="468.0" mnemonicParsing="false" onAction="#btnConfirmAction" prefHeight="30.0" prefWidth="70.0" text="Save" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo%20inverse.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#aHomeButton" prefHeight="50.0" prefWidth="200.0" styleClass="closebtn" text="Home" />
+            <Button mnemonicParsing="false" onAction="#aVaccCentresButton" prefHeight="50.0" prefWidth="200.0" text="Vaccine Centres" />
+            <Button mnemonicParsing="false" onAction="#aArticlesButton" prefHeight="50.0" prefWidth="200.0" text="Articles" />
+            <Button mnemonicParsing="false" onAction="#aVaccineInformationButton" prefHeight="50.0" prefWidth="200.0" text="Vaccine Information" />
+            <Button mnemonicParsing="false" onAction="#aPatientsButton" text="Patients" />
+            <Region prefHeight="45.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#aLogOutButton" prefHeight="50.0" prefWidth="200.0" text="Log Out" />
+         </children></VBox>
+   </left>
+</BorderPane>

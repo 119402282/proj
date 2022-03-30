@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="850.0" prefWidth="1100.0" styleClass="borderpane" stylesheets="@resources/css/PatientCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PCOVIDVaccController">
+   <top>
+      <HBox prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: EE4E34;" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="51.0" prefWidth="200.0" />
+            <Button maxWidth="300.0" mnemonicParsing="false" onAction="#infReturnButton" prefHeight="51.0" prefWidth="305.0" text="More Information" />
+            <Button maxWidth="300.0" mnemonicParsing="false" onAction="#infDiseasesButton" prefHeight="51.0" prefWidth="306.0" text="Infectious Diseases" />
+            <Button maxWidth="300.0" mnemonicParsing="false" onAction="#infCovidButton" prefHeight="51.0" prefWidth="310.0" text="COVID-19 Information" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ee4e34" layoutX="268.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19 Vaccines">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblPfizer" layoutX="102.0" layoutY="75.0" text="Pfizer Vaccine">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgCompLogo1" fitHeight="120.0" fitWidth="210.0" layoutX="61.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/Pfizer_alternative.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="225.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtPfDesc" editable="false" layoutX="30.0" layoutY="250.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Label layoutX="30.0" layoutY="400.0" text="Required Dose">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtPfDose" editable="false" layoutX="30.0" layoutY="425.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Label layoutX="30.0" layoutY="575.0" text="Vaccine Efficacy">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtPfEff" editable="false" layoutX="30.0" layoutY="600.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <ImageView fx:id="imgCompLogo2" fitHeight="120.0" fitWidth="210.0" layoutX="345.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/modernaV2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblModerna" layoutX="375.0" layoutY="75.0" prefHeight="25.0" prefWidth="153.0" text="Moderna Vaccine">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtMdEff" editable="false" layoutX="325.0" layoutY="600.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Label layoutX="325.0" layoutY="225.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="625.0" layoutY="575.0" text="Vaccine Efficacy">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtMdDose" editable="false" layoutX="325.0" layoutY="425.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <TextArea fx:id="txtMdDesc" editable="false" layoutX="325.0" layoutY="250.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Label layoutX="325.0" layoutY="400.0" text="Required Dose">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAZ" layoutX="699.0" layoutY="75.0" text="AstraZeneca">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgCompLogo3" fitHeight="120.0" fitWidth="210.0" layoutX="640.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/AstraZenecaV2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="625.0" layoutY="225.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtAZEff" editable="false" layoutX="625.0" layoutY="600.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <TextArea fx:id="txtAZDesc" editable="false" layoutX="620.0" layoutY="250.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Label layoutX="325.0" layoutY="575.0" text="Vaccine Efficacy">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtAZDose" editable="false" layoutX="625.0" layoutY="425.0" prefHeight="113.0" prefWidth="250.0" text="above company logo, in text area vaccine info, below vaccine image" wrapText="true" />
+            <Button fx:id="btnSave" layoutX="390.0" layoutY="745.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="31.0" prefWidth="122.0" text="Save" />
+            <Label layoutX="625.0" layoutY="400.0" text="Required Dose">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="sidenav" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="180.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/imgs/logo%20inverse.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#pHomeButton" prefHeight="41.0" prefWidth="243.0" text="Home ">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnGetVaccinated" mnemonicParsing="false" onAction="#pGetVaccButton" prefHeight="41.0" prefWidth="284.0" text="Get Vaccinated">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnLearnMore" mnemonicParsing="false" onAction="#pLearnMoreButton" prefHeight="41.0" prefWidth="238.0" text="Learn More">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnAppointments" mnemonicParsing="false" onAction="#pAppointmentsButton" prefHeight="41.0" prefWidth="220.0" text="Appointments">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Button>
+            <Region prefHeight="399.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#logOutButton" prefHeight="41.0" prefWidth="262.0" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

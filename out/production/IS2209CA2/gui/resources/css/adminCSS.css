@@ -1,0 +1,247 @@
+
+/* 
+    Created on : 21 Mar 2021, 19:16:47
+    Author     : Eliot and Anthony
+*/
+
+/* main background colour */
+.borderpane {
+   -fx-background-color: #FCEDDA;
+}
+
+/* header colour */
+.header {
+    -fx-background-color: #EE4E34;
+}
+
+
+/* header label size, style and colour */
+.header .label {
+    -fx-text-fill: #FCEDDA;
+    -fx-font-size: 40px;
+    -fx-font-style: italic;
+}
+
+.table-view {
+    -fx-base: #FBDFCB; /* table back colour */
+    -fx-control-inner-background: #FBDFCB; /* table back colour */
+    -fx-background-radius: 5; /* rounding background corners */
+    -fx-background-color: #FBDFCB; 
+    -fx-border-color: #EE4E34;
+    -fx-border-radius: 5; /* rounding background corners */
+    -fx-table-cell-border-color: transparent; /* removes borders */
+    -fx-table-cell-border-radius: 5; /* rounds cells */
+    -fx-table-header-border-color: transparent; /* removes header background */
+    -fx-padding: 5; /* spacing */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent; /* makes header transparent */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0 0 1 0; 
+    -fx-background-color: transparent;
+    -fx-border-color: /* adds a border to bottom of columns in header */
+        transparent
+        transparent
+        #EE4E34 
+        transparent;
+    -fx-border-insets: 0 10 1 0; /* spacing */
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14pt; 
+    -fx-font-family: "Segoe UI Light"; /* changes font in header */
+    -fx-text-fill: #EE4E34; /* font colour */
+    -fx-alignment: center-left; /* puts text on left */
+}
+
+.button {
+    -fx-background-color: #EE4E34;
+    -fx-text-fill: #FCEDDA;
+    -fx-border-radius: 5; /* rounds edges */
+    -fx-background-radius: 5; /* rounds edges */
+    -fx-font-size: 14;
+}
+
+
+.button:hover { /* colours change on hover */
+    -fx-background-color: #FBDFCB; 
+    -fx-text-fill: #EE4E34;   
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #EE4E34;
+}
+
+
+.text-field { 
+    -fx-background-color: #FBDFCB; 
+    -fx-border-radius: 5; /* rounds edges */
+    -fx-background-radius: 5; /* rounds edges */
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a;  /* changes prompt text colour */  
+}
+
+
+/* date picker design */
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a;
+    
+    
+}
+
+/* datepicker textfield design */
+.date-picker .text-field {
+    -fx-border-color: transparent;
+    -fx-background-color: #FBDFCB;
+    /* top border transparent, right is coloured, bottom transparent, left transparent */
+    -fx-border-color: transparent #FBDFCB transparent transparent;
+    
+}
+
+/* datepiceker button design */
+.date-picker > .arrow-button {
+    -fx-background-color: #FBDFCB;
+    /* top border transparent, right is transparent, bottom transparent, left coloured */
+    -fx-border-color: transparent transparent transparent #FBDFCB;
+}
+
+/* mini calender inside button design */
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color:#EE4E34 ;
+}
+
+/*date picker popup styling */
+.date-picker-popup {
+    -fx-background-color: #EE4E34;
+}
+
+/* top area styling */
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: linear-gradient(to bottom, #F8BBA6, #F59780);
+     
+}
+
+/* buttons in top area styling */
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-insets: 0, 1, 2;
+}
+
+/*removes border from spinner buttons and makes radius 0*/
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+}
+
+/* makes arrow buttons black */
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: #000000;
+}
+
+/* date picker label syling */
+.date-picker-popup > * > .spinner > .label {
+    -fx-text-fill: #000000;
+}
+
+/* day cell sttyling in pop-up */
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: #F8BBA6;
+}
+
+/* date cell styling in pop-up */
+.date-picker-popup > * > .day-cell { 
+   -fx-background-color: #FCEDDA;
+   -fx-border-color: #F59780;
+}
+
+/* hover styling for date cells */
+.date-picker-popup > * > .day-cell:hover {
+    -fx-text-fill: #FCEDDA;
+    -fx-background-color: #C4412B;
+}
+
+/* highlights today */
+.date-picker-popup > * > .today {
+    -fx-background-color: #FCEDDA, #C4412B, #FCEDDA;
+}
+
+/* darker cells for coming and previous month */
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background-color: #F8BBA6;
+}
+
+.label {
+    -fx-text-fill: #EE4E34;
+}
+
+/* side menu styling */
+.sidenav {
+    -fx-background-color: #EE4E34;
+    -fx-position: fixed;
+    -fx-pref-width: 200;
+}
+
+.sidenav .button {
+  -fx-padding: 8px 8px 8px 8px; /* spacing */
+  -fx-font-size: 16px;
+  -fx-background-color: #EE4E34;
+  -fx-text-fill: #FCEDDA;
+  -fx-border-radius: 0;
+  -fx-background-radius: 0;
+  -fx-pref-width: 200; /* sets base width */
+  -fx-pref-height: 50; /* sets base height */
+} 
+
+.sidenav .button:hover {
+  -fx-background-color: #FCEDDA;
+  -fx-text-fill: #EE4E34;
+  /* top border transparent, right is coloured, bottom transparent, left transparent */
+  -fx-border-color: transparent transparent transparent transparent;
+  -fx-border-radius: 0;
+  -fx-background-radius: 0;
+}
+
+.check-box {
+    -fx-text-fill: #EE4E34; 
+    -fx-font-size: 14;
+    
+}
+
+.check-box > .box {
+    -fx-background-color: linear-gradient(to bottom, #F8BBA6, #F59780);
+    -fx-border-color: #F59780;
+    -fx-padding: 0.166667em 0.166667em 0.25em 0.25em; /* 2 2 3 3 */    
+}
+
+.check-box > .box > .mark {
+    -fx-colour: #000000; 
+    -fx-padding: 0.416667em 0.416667em 0.5em 0.5em; /* 5 5 6 6 */
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+
+/* combobox styling */
+.combo-box-base {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 5; /* rounds edges */
+    -fx-background-radius: 5; /* rounds edges */
+    -fx-border-color: #EE4E34;
+    
+}
+
+/* changes combobox dropdown list styling */
+.list-view {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a;  /* changes prompt text colour */  
+}

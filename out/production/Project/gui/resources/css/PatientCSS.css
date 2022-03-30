@@ -1,0 +1,280 @@
+/* 
+    Created on : 21 Mar 2021, 21:08:32
+    Author     : eliot
+*/
+
+.borderpane {
+   -fx-background-color: #FCEDDA;
+}
+
+.table-view {
+    -fx-base: #FBDFCB;
+    -fx-control-inner-background: #FBDFCB;
+    -fx-background-radius: 15;
+    -fx-background-color: #FBDFCB;
+    -fx-border-color: #EE4E34;
+    -fx-border-radius: 15;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-cell-border-radius: 15;
+    -fx-table-header-border-color: transparent;
+    -fx-table-cell-border-radius: 15;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 14;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        #EE4E34 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #EE4E34;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+
+.button {
+    -fx-background-color: #EE4E34;
+    -fx-text-fill: #FCEDDA;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.button:hover {
+    -fx-background-color: #FBDFCB;
+    -fx-text-fill: #EE4E34;   
+    -fx-border-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.hyperlink:hover {
+    -fx-fill: #FBDFCB
+    
+}
+.text-field {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a;    
+}
+
+.label {
+    -fx-text-fill: #EE4E34
+}
+
+.listview {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.combobox {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.text-area {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.radio-button {
+    -fx-text-fill: #EE4E34;
+}
+
+
+.anchorpane {
+    -fx-background-color: #EE4E34
+}
+
+.hbox {
+    -fx-background-color: #EE4E34
+}
+
+/* side menu styling */
+.sidenav {
+    -fx-background-color: #EE4E34;
+    -fx-position: fixed;
+    -fx-pref-width: 200;
+}
+
+.sidenav .button {
+  -fx-padding: 8px 8px 8px 8px;
+  -fx-font-size: 16px;
+  -fx-background-color: #EE4E34;
+  -fx-text-fill: #FCEDDA;
+  -fx-border-radius: 0;
+  -fx-background-radius: 0;
+}
+
+.sidenav .button:hover {
+  -fx-background-color: #FCEDDA;
+  -fx-text-fill: #EE4E34;
+  /* top border transparent, right is coloured, bottom transparent, left transparent */
+  -fx-border-color: transparent transparent transparent transparent;
+  -fx-border-radius: 0;
+  -fx-background-radius: 0;
+}
+
+
+/* date picker design */
+.datePicker {
+    -fx-background-color: transparent;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #EE4E34;
+    -fx-prompt-text-fill: #5a5a5a; 
+}
+
+/* datepicker textfield design */
+.datePicker .text-field {
+    -fx-border-color: transparent;
+    -fx-background-color: #FBDFCB;
+    /* top border transparent, right is coloured, bottom transparent, left transparent */
+    -fx-border-color: transparent #FBDFCB transparent transparent;
+    
+}
+
+/* datepiceker button design */
+.date-picker > .arrow-button {
+    -fx-background-color: #FBDFCB;
+    /* top border transparent, right is transparent, bottom transparent, left coloured */
+    -fx-border-color: #EE4E34;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    
+}
+
+/* mini calender inside button design */
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color:#EE4E34 ;
+}
+
+/*date picker popup styling */
+.date-picker-popup {
+    -fx-background-color: #EE4E34;
+}
+
+/* top area styling */
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: linear-gradient(to bottom, #F8BBA6, #F59780);
+     
+}
+
+/* buttons in top area styling */
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-insets: 0, 1, 2;
+}
+
+/*removes border from spinner buttons and makes radius 0*/
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+}
+
+/* makes arrow buttons black */
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: #000000;
+}
+
+/* date picker label syling */
+.date-picker-popup > * > .spinner > .label {
+    -fx-text-fill: #000000;
+}
+
+/* day cell sttyling in pop-up */
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: #F8BBA6;
+}
+
+/* date cell styling in pop-up */
+.date-picker-popup > * > .day-cell { 
+   -fx-background-color: #FCEDDA;
+   -fx-border-color: #F59780;
+}
+
+/* hover styling for date cells */
+.date-picker-popup > * > .day-cell:hover {
+    -fx-text-fill: #FCEDDA;
+    -fx-background-color: #C4412B;
+}
+
+/* highlights today */
+.date-picker-popup > * > .today {
+     -fx-background-color: #FCEDDA, #C4412B, #FCEDDA;
+}
+
+/* darker cells for coming and previous month */
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background-color: #F8BBA6;
+}
+
+.image-view {
+    -fx-border-image-width: 50, 100;
+    -fx-border-image-slice: 50, 20;
+    -fx-border-width:60,110;
+    -fx-border-color: #EE4E34;
+}
+
+
+.list-view {
+    -fx-background-color: #FBDFCB;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-border-color: #EE4E34;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #FCEDDA;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #EE4E34;
+    -fx-text-fill: #FCEDDA;
+}
+
+.list-view .list-cell {
+    -fx-background-color: #FBDFCB;
+    -fx-text-fill: #EE4E34;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+
